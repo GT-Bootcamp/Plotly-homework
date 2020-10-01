@@ -37,7 +37,7 @@ function makePlot(testId){
         var minIds=d3.min(otuId);
         var maxIds=d3.max(otuId);
         var mapNr = d3.scaleLinear().domain([minIds, maxIds]).range([0, 1]);
-        var bubbleColors = otuId.map( val => d3.interpolateRgbBasis(["royalblue", "greenyellow", "goldenrod"])(mapNr(val)));
+        var bubbleColors = otuId.map( val => d3.interpolateRgbBasis(["red", "green", "yellow"])(mapNr(val)));
         var trace1={
             x: otuId,
             y: otuValue,
